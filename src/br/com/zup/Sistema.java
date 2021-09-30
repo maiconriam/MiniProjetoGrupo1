@@ -1,6 +1,5 @@
 package br.com.zup;
 
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -12,28 +11,7 @@ public class Sistema {
         System.out.println(mensagem);
         return new Scanner(System.in);
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    
     public static Aluno cadastrarAlunos() {
         String aluno = capturarDados("Digite o nome do aluno que deseja matricular!").nextLine();
 
@@ -61,6 +39,5 @@ public class Sistema {
         PersonalTrainer personal1 = new PersonalTrainer();
         return personal1;
     }
-
 
 }
