@@ -1,6 +1,6 @@
 package br.com.zup;
 
-public class Aluno {
+public class Aluno extends Pessoa{
     private double alturaAluno;
     private double pesoAluno;
 
@@ -31,8 +31,10 @@ public class Aluno {
     @Override
     public String toString() {
         StringBuilder retorno = new StringBuilder();
-        retorno.append("Altura do aluno: " + alturaAluno);
-        retorno.append("Peso do aluno: " + pesoAluno);
+        retorno.append("Nome do aluno: " + getNome());
+        retorno.append("\nCPF do aluno: " + getCpf());
+        retorno.append("\nAltura do aluno: " + alturaAluno);
+        retorno.append("\nPeso do aluno: " + pesoAluno);
         return retorno.toString();
     }
 }
