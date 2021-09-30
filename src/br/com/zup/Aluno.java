@@ -27,4 +27,12 @@ public class Aluno {
     public void setPesoAluno(double pesoAluno) {
         this.pesoAluno = pesoAluno;
     }
+
+    @Override
+    public String toString() {
+        StringBuilder retorno = new StringBuilder();
+        retorno.append("Altura do aluno: " + alturaAluno);
+        retorno.append("Peso do aluno: " + pesoAluno);
+        return retorno.toString();
+    }
 }
