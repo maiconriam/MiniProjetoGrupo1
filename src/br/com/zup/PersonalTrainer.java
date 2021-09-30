@@ -37,6 +37,10 @@ public class PersonalTrainer {
         return alunos;
     }
 
+    public void adicionarAluno(Aluno novoaluno){
+        alunos.add(novoaluno);
+    }
+
     @Override
     public String toString() {
         StringBuilder retorno = new StringBuilder();
