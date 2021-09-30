@@ -37,4 +37,12 @@ public class PersonalTrainer {
         return alunos;
     }
 
+    @Override
+    public String toString() {
+        StringBuilder retorno = new StringBuilder();
+        retorno.append("Quantidade de Aula: " + qtdDeAula);
+        retorno.append("Aula Ministrada: " + aulaMinistrada.getTipoDaAula());
+        retorno.append("Alunos: " + alunos);
+        return retorno.toString();
+    }
 }
