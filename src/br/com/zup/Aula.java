@@ -12,8 +12,7 @@ public class Aula {
 
     }
 
-    public Aula(List<Horario> horario, String tipoDaAula, double valorDaAula) {
-        this.horario = horario;
+    public Aula(String tipoDaAula, double valorDaAula) {
         this.tipoDaAula = tipoDaAula;
         this.valorDaAula = valorDaAula;
     }
@@ -42,7 +41,7 @@ public class Aula {
         this.valorDaAula = valorDaAula;
     }
 
-    public void adicionarHorario(int novoHorario) {
+    public void adicionarHorario(Horario novoHorario) {
         horario.add(novoHorario);
     }
 
