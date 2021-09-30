@@ -7,7 +7,8 @@ public class Aluno extends Pessoa{
     public Aluno(){
     }
 
-    public Aluno(double alturaAluno, double pesoAluno) {
+    public Aluno(String nome, String cpf, double alturaAluno, double pesoAluno) {
+        super(nome, cpf);
         this.alturaAluno = alturaAluno;
         this.pesoAluno = pesoAluno;
     }

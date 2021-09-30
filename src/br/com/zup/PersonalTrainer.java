@@ -12,7 +12,8 @@ public class PersonalTrainer extends Pessoa {
 
     }
 
-    public PersonalTrainer(int qtdDeAula, Aula aulaMinistrada) {
+    public PersonalTrainer(String nome, String cpf, int qtdDeAula, Aula aulaMinistrada) {
+        super(nome, cpf);
         this.qtdDeAula = qtdDeAula;
         this.aulaMinistrada = aulaMinistrada;
     }
