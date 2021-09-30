@@ -17,4 +17,28 @@ public class Aula {
         this.tipoDaAula = tipoDaAula;
         this.valorDaAula = valorDaAula;
     }
+
+    public List<Horario> getHorario() {
+        return horario;
+    }
+
+    public void setHorario(List<Horario> horario) {
+        this.horario = horario;
+    }
+
+    public String getTipoDaAula() {
+        return tipoDaAula;
+    }
+
+    public void setTipoDaAula(String tipoDaAula) {
+        this.tipoDaAula = tipoDaAula;
+    }
+
+    public double getValorDaAula() {
+        return valorDaAula;
+    }
+
+    public void setValorDaAula(double valorDaAula) {
+        this.valorDaAula = valorDaAula;
+    }
 }
