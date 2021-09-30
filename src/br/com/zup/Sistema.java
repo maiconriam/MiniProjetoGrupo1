@@ -13,10 +13,13 @@ public class Sistema {
     }
     
     public static Aluno cadastrarAlunos() {
-        String aluno = capturarDados("Digite o nome do aluno que deseja matricular!").nextLine();
+        String nome = capturarDados("Digite o nome do aluno").nextLine();
+        String cpf = capturarDados("Digite o cpf do aluno").nextLine();
+        double altura = capturarDados("Digite a altura do aluno").nextDouble();
+        double peso = capturarDados("Digite o peso do aluno").nextDouble();
 
-        Aluno novoAluno = new Aluno();
-        novoAluno.setAluno(aluno);
+        Aluno novoAluno = new Aluno(nome, cpf, altura, peso);
+
         return novoAluno;
     }
 
