@@ -41,4 +41,7 @@ public class Aula {
     public void setValorDaAula(double valorDaAula) {
         this.valorDaAula = valorDaAula;
     }
+    public void adicionarHorario(int novoHorario){
+      horario.add(novoHorario);
+    }
 }
