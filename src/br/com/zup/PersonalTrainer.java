@@ -45,8 +45,8 @@ public class PersonalTrainer {
     public String toString() {
         StringBuilder retorno = new StringBuilder();
         retorno.append("Quantidade de Aula: " + qtdDeAula);
-        retorno.append("Aula Ministrada: " + aulaMinistrada.getTipoDaAula());
-        retorno.append("Alunos: " + alunos);
+        retorno.append("\nAula Ministrada: " + aulaMinistrada.getTipoDaAula());
+        retorno.append("\nAlunos: " + alunos);
         return retorno.toString();
     }
 }
