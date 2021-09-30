@@ -45,6 +45,8 @@ public class Aula {
         horario.add(novoHorario);
     }
 
+
+
     @Override
     public String toString() {
         StringBuilder retorno = new StringBuilder();
