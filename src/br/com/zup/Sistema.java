@@ -1,5 +1,7 @@
 package br.com.zup;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 public class Sistema {
@@ -8,7 +10,15 @@ public class Sistema {
         System.out.println(mensagem);
         return new Scanner(System.in);
     }
-}
+
+
+
+
+
+
+
+
+
 
 
 
@@ -28,3 +38,30 @@ public class Sistema {
         novoAluno.setAluno(aluno);
         return novoAluno;
     }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
