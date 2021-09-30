@@ -3,7 +3,7 @@ package br.com.zup;
 import java.util.ArrayList;
 import java.util.List;
 
-public class PersonalTrainer {
+public class PersonalTrainer extends Pessoa {
     private int qtdDeAula;
     private Aula aulaMinistrada;
     private List<Aluno> alunos = new ArrayList<>();
@@ -44,9 +44,11 @@ public class PersonalTrainer {
     @Override
     public String toString() {
         StringBuilder retorno = new StringBuilder();
-        retorno.append("Quantidade de Aula: " + qtdDeAula);
-        retorno.append("Aula Ministrada: " + aulaMinistrada.getTipoDaAula());
-        retorno.append("Alunos: " + alunos);
+        retorno.append("Personal: " + getNome());
+        retorno.append("\nCPF do Personal: " + getCpf());
+        retorno.append("\nQuantidade de Aula: " + qtdDeAula);
+        retorno.append("\nAula Ministrada: " + aulaMinistrada.getTipoDaAula());
+        retorno.append("\nAlunos: " + alunos);
         return retorno.toString();
     }
 }
