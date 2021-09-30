@@ -17,4 +17,11 @@ public class Horario {
     public void setHorario(int horario) {
         this.horario = horario;
     }
+
+    public String toString() {
+        StringBuilder retorno = new StringBuilder();
+        retorno.append("Horario da aula: " + horario);
+        return retorno.toString();
+    }
+
 }
