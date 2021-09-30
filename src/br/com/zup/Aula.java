@@ -41,14 +41,16 @@ public class Aula {
     public void setValorDaAula(double valorDaAula) {
         this.valorDaAula = valorDaAula;
     }
-    public void adicionarHorario(int novoHorario){
-      horario.add(novoHorario);
+
+    public void adicionarHorario(int novoHorario) {
+        horario.add(novoHorario);
     }
+
     @Override
     public String toString() {
         StringBuilder retorno = new StringBuilder();
-        retorno.append("Tipo de aula: " +tipoDaAula);
-        retorno.append("Valor da aula: " +valorDaAula);
+        retorno.append("Tipo de aula: " + tipoDaAula);
+        retorno.append("Valor da aula: " + valorDaAula);
         return retorno.toString();
     }
 }
