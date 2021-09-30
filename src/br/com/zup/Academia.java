@@ -7,11 +7,19 @@ public class Academia {
     private List<Aula> aulas = new ArrayList<>();
     private List<PersonalTrainer> personalTrainers = new ArrayList<>();
 
-    public void adicionarPersonal(String nome){
+    public void adicionarPersonal(PersonalTrainer nome){
         personalTrainers.add(nome);
     }
 
-    public void adicionarAula(String nomeDaAula){
+    public void adicionarAula(Aula nomeDaAula){
         aulas.add(nomeDaAula);
+    }
+
+    @Override
+    public String toString() {
+        StringBuilder retorno = new StringBuilder();
+        retorno.append("Personal Trainers: " + personalTrainers);
+        retorno.append("Aulas: " + aulas);
+        return retorno.toString();
     }
 }
