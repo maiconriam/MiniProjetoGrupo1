@@ -15,7 +15,6 @@ public class PersonalTrainer extends Pessoa {
         super(nome, cpf);
         this.aulaMinistrada = aulaMinistrada;
     }
-
     public Aula getAulaMinistrada() {
         return aulaMinistrada;
     }
@@ -28,7 +27,7 @@ public class PersonalTrainer extends Pessoa {
         return alunos;
     }
 
-    public void adicionarAluno(Aluno novoaluno){
+    public void adicionarAluno(Aluno novoaluno) {
         alunos.add(novoaluno);
     }
 
