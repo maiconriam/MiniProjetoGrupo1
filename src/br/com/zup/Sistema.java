@@ -61,6 +61,8 @@ public class Sistema {
         }
         int escolha = capturarDados("Digite a sua escolha").nextInt();
         Aula aula = pt.get(escolha - 1).getAulaMinistrada();
+        Aluno aluno = cadastrarAlunos();
+        pt.get(escolha -1).adicionarAluno(aluno);
 
         return aula;
     }
@@ -76,7 +78,6 @@ public class Sistema {
             switch (escolhaMenu){
                 case 1:
                     selecionarAula();
-                    cadastrarAlunos();
                     break;
                 case 2:
                     System.out.println(pt);
