@@ -1,11 +1,10 @@
 package br.com.zup;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Scanner;
+import java.util.*;
 
 public class Sistema {
     static List<PersonalTrainer> pt = new ArrayList<>();
+    static Map<Integer, Academia> listaDeAulas = new HashMap<>();
 
     public static Scanner capturarDados(String mensagem) {
         System.out.println(mensagem);
@@ -22,8 +21,7 @@ public class Sistema {
         return novoAluno;
     }
 
-    public static void executar() {
-        Academia academia = new Academia();
+    public static void carregarDados(){
         Horario horario1 = new Horario(11);
         Horario horario2 = new Horario(15);
         Horario horario3 = new Horario(10);
@@ -44,12 +42,10 @@ public class Sistema {
         pt.add(joao);
         pt.add(marcelo);
         pt.add(maria);
-        academia.adicionarPersonal(joao);
-        academia.adicionarPersonal(marcelo);
-        academia.adicionarPersonal(maria);
-        academia.adicionarAula(natacao);
-        academia.adicionarAula(ginastica);
-        academia.adicionarAula(pilates);
+    }
+
+    public static void executar() {
+        carregarDados();
         boolean menu = true;
         int escolhaMenu;
 
