@@ -4,7 +4,6 @@ import java.util.*;
 
 public class Sistema {
     static List<PersonalTrainer> pt = new ArrayList<>();
-    static Map<Integer, Academia> listaDeAulas = new HashMap<>();
 
     public static Scanner capturarDados(String mensagem) {
         System.out.println(mensagem);
@@ -50,7 +49,7 @@ public class Sistema {
         pt.add(maria);
     }
 
-    public static List<Aula> selecionarAula(){
+    public static Aula selecionarAula(){
         int index = 1;
         for (PersonalTrainer personal : pt){
             Aula aulaMinistrada = personal.getAulaMinistrada();
@@ -58,9 +57,12 @@ public class Sistema {
             for (Horario horario : aulaMinistrada.getHorario()) {
                 System.out.println("[" + index + "] " + horario.getHorario() + ":00 Professor: " + personal.getNome());
                 index++;
-            }}
+            }
+        }
         int escolha = capturarDados("Digite a sua escolha").nextInt();
-        return selecionarAula();
+        Aula aula = pt.get(escolha - 1).getAulaMinistrada();
+
+        return aula;
     }
 
     public static void executar() {
@@ -74,7 +76,7 @@ public class Sistema {
             switch (escolhaMenu){
                 case 1:
                     selecionarAula();
-
+                    cadastrarAlunos();
                     break;
                 case 2:
                     System.out.println(pt);
