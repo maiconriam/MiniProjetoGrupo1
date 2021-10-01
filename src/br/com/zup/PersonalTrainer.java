@@ -10,9 +10,10 @@ public class PersonalTrainer extends Pessoa {
     public PersonalTrainer() {
 
     }
-
+  
     public PersonalTrainer(String nome, String cpf, Aula aulaMinistrada) {
         super(nome, cpf);
+
         this.aulaMinistrada = aulaMinistrada;
     }
 
