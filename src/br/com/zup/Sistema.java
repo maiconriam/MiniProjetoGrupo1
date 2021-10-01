@@ -52,5 +52,12 @@ public class Sistema {
         academia.adicionarAula(pilates);
         boolean menu = true;
         int escolhaMenu;
+
+        while (menu){
+
+            System.out.println("Digite 1: Para adicionar um aluno");
+            System.out.println("Digite 2: Para ver lista");
+            System.out.println("Digite 3: Para sair do programa");
+            escolhaMenu = capturarDados("Digite a sua escolha").nextInt();
     }
 }
