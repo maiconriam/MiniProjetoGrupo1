@@ -71,7 +71,23 @@ public class Sistema {
                         }}
                     int escolha = capturarDados("Digite a sua escolha").nextInt();
 
-
+                    if(escolha == 1){
+                        joao.adicionarAluno(cadastrarAlunos());
+                    }
+                    if(escolha == 2){
+                        marcelo.adicionarAluno(cadastrarAlunos());
+                    }
+                    if(escolha == 3){
+                        maria.adicionarAluno(cadastrarAlunos());
+                    }
+                    break;
+                case 2:
+                    System.out.println(pt);
+                    break;
+                case 3:
+                    System.out.println("Programa finalizado");
+                    menu = false;
+                    break;
             }
         }
     }
