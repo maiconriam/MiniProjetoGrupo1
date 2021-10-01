@@ -44,6 +44,19 @@ public class Sistema {
         pt.add(maria);
     }
 
+    public static List<Aula> selecionarAula(){
+        int index = 1;
+        for (PersonalTrainer personal : pt){
+            Aula aulaMinistrada = personal.getAulaMinistrada();
+            System.out.println(personal.getAulaMinistrada().getTipoDaAula());
+            for (Horario horario : aulaMinistrada.getHorario()) {
+                System.out.println("[" + index + "] " + horario.getHorario() + ":00 Professor: " + personal.getNome());
+                index++;
+            }}
+        int escolha = capturarDados("Digite a sua escolha").nextInt();
+        return selecionarAula();
+    }
+
     public static void executar() {
         carregarDados();
         boolean menu = true;
@@ -57,15 +70,7 @@ public class Sistema {
             escolhaMenu = capturarDados("Digite a sua escolha").nextInt();
             switch (escolhaMenu){
                 case 1:
-                    int index = 1;
-                    for (PersonalTrainer personal : pt){
-                        Aula aulaMinistrada = personal.getAulaMinistrada();
-                        System.out.println(personal.getAulaMinistrada().getTipoDaAula());
-                        for (Horario horario : aulaMinistrada.getHorario()) {
-                            System.out.println("[" + index + "] " + horario.getHorario() + ":00 Professor: " + personal.getNome());
-                            index++;
-                        }}
-                    int escolha = capturarDados("Digite a sua escolha").nextInt();
+                    selecionarAula();
 
                     if(escolha == 1){
                         joao.adicionarAluno(cadastrarAlunos());
