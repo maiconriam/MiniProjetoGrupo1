@@ -50,8 +50,8 @@ public class Aula {
     @Override
     public String toString() {
         StringBuilder retorno = new StringBuilder();
-        retorno.append("Tipo de aula: " + tipoDaAula);
-        retorno.append("Valor da aula: " + valorDaAula);
+        retorno.append("\n Tipo de aula: " + tipoDaAula);
+        retorno.append("\n Valor da aula: " + valorDaAula);
         return retorno.toString();
     }
 }
