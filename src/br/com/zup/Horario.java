@@ -20,7 +20,7 @@ public class Horario {
 
     public String toString() {
         StringBuilder retorno = new StringBuilder();
-        retorno.append("Horario da aula: " + horario);
+        retorno.append("\n Horario da aula: " + horario);
         return retorno.toString();
     }
 

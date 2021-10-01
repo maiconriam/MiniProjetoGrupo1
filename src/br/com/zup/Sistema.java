@@ -11,7 +11,7 @@ public class Sistema {
         System.out.println(mensagem);
         return new Scanner(System.in);
     }
-    
+
     public static Aluno cadastrarAlunos() {
         String nome = capturarDados("Digite o nome do aluno").nextLine();
         String cpf = capturarDados("Digite o cpf do aluno").nextLine();

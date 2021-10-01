@@ -1,5 +1,6 @@
 package br.com.zup;
 
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -18,8 +19,8 @@ public class Academia {
     @Override
     public String toString() {
         StringBuilder retorno = new StringBuilder();
-        retorno.append("Personal Trainers: " + personalTrainers);
-        retorno.append("Aulas: " + aulas);
+        retorno.append("\n Personal Trainers: " + personalTrainers);
+        retorno.append("\n Aulas: " + aulas);
         return retorno.toString();
     }
 }
