@@ -32,7 +32,7 @@ public class Aluno extends Pessoa{
     @Override
     public String toString() {
         StringBuilder retorno = new StringBuilder();
-        retorno.append("Nome do aluno: " + getNome());
+        retorno.append("\nNome do aluno: " + getNome());
         retorno.append("\nCPF do aluno: " + getCpf());
         retorno.append("\nAltura do aluno: " + alturaAluno);
         retorno.append("\nPeso do aluno: " + pesoAluno);
