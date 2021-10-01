@@ -1,8 +1,6 @@
 package br.com.zup;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Scanner;
+import java.util.*;
 
 public class Sistema {
     static List<PersonalTrainer> pt = new ArrayList<>();
@@ -10,6 +8,12 @@ public class Sistema {
     public static Scanner capturarDados(String mensagem) {
         System.out.println(mensagem);
         return new Scanner(System.in);
+    }
+
+    public static void menu(){
+        System.out.println("Digite 1: Para adicionar um aluno");
+        System.out.println("Digite 2: Para ver lista");
+        System.out.println("Digite 3: Para sair do programa");
     }
 
     public static Aluno cadastrarAlunos() {
@@ -22,8 +26,7 @@ public class Sistema {
         return novoAluno;
     }
 
-    public static void executar() {
-        Academia academia = new Academia();
+    public static void carregarDados(){
         Horario horario1 = new Horario(11);
         Horario horario2 = new Horario(15);
         Horario horario3 = new Horario(10);
@@ -44,42 +47,37 @@ public class Sistema {
         pt.add(joao);
         pt.add(marcelo);
         pt.add(maria);
-        academia.adicionarPersonal(joao);
-        academia.adicionarPersonal(marcelo);
-        academia.adicionarPersonal(maria);
-        academia.adicionarAula(natacao);
-        academia.adicionarAula(ginastica);
-        academia.adicionarAula(pilates);
+    }
+
+    public static Aula selecionarAula(){
+        int index = 1;
+        for (PersonalTrainer personal : pt){
+            Aula aulaMinistrada = personal.getAulaMinistrada();
+            System.out.println(personal.getAulaMinistrada().getTipoDaAula());
+            for (Horario horario : aulaMinistrada.getHorario()) {
+                System.out.println("[" + index + "] " + horario.getHorario() + ":00 Professor: " + personal.getNome());
+                index++;
+            }
+        }
+        int escolha = capturarDados("Digite a sua escolha").nextInt();
+        Aula aula = pt.get(escolha - 1).getAulaMinistrada();
+        Aluno aluno = cadastrarAlunos();
+        pt.get(escolha -1).adicionarAluno(aluno);
+
+        return aula;
+    }
+
+    public static void executar() {
+        carregarDados();
         boolean menu = true;
         int escolhaMenu;
 
         while (menu){
-
-            System.out.println("Digite 1: Para adicionar um aluno");
-            System.out.println("Digite 2: Para ver lista");
-            System.out.println("Digite 3: Para sair do programa");
+            menu();
             escolhaMenu = capturarDados("Digite a sua escolha").nextInt();
             switch (escolhaMenu){
                 case 1:
-                    int index = 1;
-                    for (PersonalTrainer personal : pt){
-                        Aula aulaMinistrada = personal.getAulaMinistrada();
-                        System.out.println(personal.getAulaMinistrada().getTipoDaAula());
-                        for (Horario horario : aulaMinistrada.getHorario()) {
-                            System.out.println("[" + index + "] " + horario.getHorario() + ":00 Professor: " + personal.getNome());
-                            index++;
-                        }}
-                    int escolha = capturarDados("Digite a sua escolha").nextInt();
-
-                    if(escolha == 1){
-                        joao.adicionarAluno(cadastrarAlunos());
-                    }
-                    if(escolha == 2){
-                        marcelo.adicionarAluno(cadastrarAlunos());
-                    }
-                    if(escolha == 3){
-                        maria.adicionarAluno(cadastrarAlunos());
-                    }
+                    selecionarAula();
                     break;
                 case 2:
                     System.out.println(pt);
