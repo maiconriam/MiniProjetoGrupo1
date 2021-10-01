@@ -59,5 +59,20 @@ public class Sistema {
             System.out.println("Digite 2: Para ver lista");
             System.out.println("Digite 3: Para sair do programa");
             escolhaMenu = capturarDados("Digite a sua escolha").nextInt();
+            switch (escolhaMenu){
+                case 1:
+                    int index = 1;
+                    for (PersonalTrainer personal : pt){
+                        Aula aulaMinistrada = personal.getAulaMinistrada();
+                        System.out.println(personal.getAulaMinistrada().getTipoDaAula());
+                        for (Horario horario : aulaMinistrada.getHorario()) {
+                            System.out.println("[" + index + "] " + horario.getHorario() + ":00 Professor: " + personal.getNome());
+                            index++;
+                        }}
+                    int escolha = capturarDados("Digite a sua escolha").nextInt();
+
+
+            }
+        }
     }
 }
