@@ -40,6 +40,24 @@ public class Sistema {
         PersonalTrainer joao = new PersonalTrainer("Joao", "293092039293", natacao);
         PersonalTrainer marcelo = new PersonalTrainer("Marcelo", "312039103913", ginastica);
         PersonalTrainer maria = new PersonalTrainer("Maria", "4983894983984", pilates);
+
+        pt.add(joao);
+        pt.add(marcelo);
+        pt.add(maria);
+        academia.adicionarPersonal(joao);
+        academia.adicionarPersonal(marcelo);
+        academia.adicionarPersonal(maria);
+        academia.adicionarAula(natacao);
+        academia.adicionarAula(ginastica);
+        academia.adicionarAula(pilates);
+        boolean menu = true;
+        int escolhaMenu;
+
+        while (menu){
+
+            System.out.println("Digite 1: Para adicionar um aluno");
+            System.out.println("Digite 2: Para ver lista");
+            System.out.println("Digite 3: Para sair do programa");
+            escolhaMenu = capturarDados("Digite a sua escolha").nextInt();
     }
-}
 }
