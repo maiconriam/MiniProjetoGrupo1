@@ -11,6 +11,12 @@ public class Sistema {
         return new Scanner(System.in);
     }
 
+    public static void menu(){
+        System.out.println("Digite 1: Para adicionar um aluno");
+        System.out.println("Digite 2: Para ver lista");
+        System.out.println("Digite 3: Para sair do programa");
+    }
+
     public static Aluno cadastrarAlunos() {
         String nome = capturarDados("Digite o nome do aluno").nextLine();
         String cpf = capturarDados("Digite o cpf do aluno").nextLine();
@@ -63,24 +69,12 @@ public class Sistema {
         int escolhaMenu;
 
         while (menu){
-
-            System.out.println("Digite 1: Para adicionar um aluno");
-            System.out.println("Digite 2: Para ver lista");
-            System.out.println("Digite 3: Para sair do programa");
+            menu();
             escolhaMenu = capturarDados("Digite a sua escolha").nextInt();
             switch (escolhaMenu){
                 case 1:
                     selecionarAula();
 
-                    if(escolha == 1){
-                        joao.adicionarAluno(cadastrarAlunos());
-                    }
-                    if(escolha == 2){
-                        marcelo.adicionarAluno(cadastrarAlunos());
-                    }
-                    if(escolha == 3){
-                        maria.adicionarAluno(cadastrarAlunos());
-                    }
                     break;
                 case 2:
                     System.out.println(pt);
